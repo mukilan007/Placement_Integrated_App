@@ -26,14 +26,14 @@
         <div class="col-md-4">
           <div class="card mt-325">
             <div class="card-body">
-              <form class="form">
+              <form class="form" action="/login" method="post">
                 <h1 class="text-center">Please sign in</h1><br>
                 <div class="form-floating">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@bitsathy.ac.in">
+                  <input type="email" class="form-control" name="Email" id="floatingInput" placeholder="name@bitsathy.ac.in">
                   <label for="floatingInput">Email Id</label>
                 </div>
                 <div class="form-floating mt-3">
-                  <input type="password" class="form-control" id="floatingInput" placeholder="Password">
+                  <input type="password" class="form-control" name="Password" id="floatingInput" placeholder="Password">
                   <label for="floatingInput">Password</label>
                 </div>
                   <input type="submit" class="btn btn-primary btn-block btn-lg mt-3" value="SIGN IN">

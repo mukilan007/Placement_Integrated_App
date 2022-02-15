@@ -17,3 +17,14 @@
 .mt-325{
     margin-top:325px
 }
+
+.mt-001{
+    margin-top: 150px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    margin-left: 320px;
+    padding-top: 50px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+}

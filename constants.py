@@ -7,7 +7,8 @@ class Endpoint:
     """ Route endpoints """
     USERLOGIN = "UserLogin"
     LOGIN = "Login"
-    REGISTER = "register"
+    REGISTER = "Register"
+    LOGOUT = "Logout"
 
 
 class HttpStatusCodes:

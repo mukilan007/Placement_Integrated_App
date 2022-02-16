@@ -6,6 +6,8 @@ class BlueprintName:
 class Endpoint:
     """ Route endpoints """
     USERLOGIN = "UserLogin"
+    LOGIN = "Login"
+    REGISTER = "register"
 
 
 class HttpStatusCodes:
@@ -51,13 +53,13 @@ class HttpStatusCodes:
 
 
 class HTTP_REQUESTS_CONSTANTS:
-    POST = "POST"
-    GET = "GET"
-    HEAD = "HEAD"
-    PUT = "PUT"
-    PATCH = "PATCH"
-    DELETE = "DELETE"
-    OPTIONS = "OPTIONS"
+    POST = 'POST'
+    GET = 'GET'
+    HEAD = 'HEAD'
+    PUT = 'PUT'
+    PATCH = 'PATCH'
+    DELETE = 'DELETE'
+    OPTIONS = 'OPTIONS'
     HTTP_STATUS = HttpStatusCodes
-    HTTP_PROTOCOL = "http://"
-    HTTPS_PROTOCOL = "https://"
+    HTTP_PROTOCOL = 'http://'
+    HTTPS_PROTOCOL = 'https://'

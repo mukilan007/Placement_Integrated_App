@@ -28,3 +28,24 @@
     padding-bottom: 30px;
     padding-left: 40px;
 }
+
+.first-hotel{
+    background-color: #FFC7C7;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+}
+.second-hotel{
+    background-color: #FFE2E2;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+}
+.third-hotel{
+    background-color: #F6F6F6;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+}
+.fourth-hotel{
+    background-color: #8785A2;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+}

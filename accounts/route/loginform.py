@@ -6,9 +6,6 @@ from cryptography.fernet import Fernet
 
 login_blueprint = Blueprint(BlueprintName.LOGIN, __name__, static_folder='static', template_folder='templates')
 
-key = b'pRmgMa8T0INjEAfksaq2aafzoZXEuwKI7wDe4c1F8AY='
-fernet = Fernet(key)
-
 
 def self_service_instance():
     return AccountService()

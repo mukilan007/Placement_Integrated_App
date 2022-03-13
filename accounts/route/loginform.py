@@ -1,4 +1,6 @@
-from flask import Blueprint, request, render_template, session, redirect
+from flask import Blueprint
+
+from accounts.services.accounts_services import AccountService
 from constants import BlueprintName, Endpoint, HTTP_REQUESTS_CONSTANTS
 from cryptography.fernet import Fernet
 
@@ -8,31 +10,41 @@ key = b'pRmgMa8T0INjEAfksaq2aafzoZXEuwKI7wDe4c1F8AY='
 fernet = Fernet(key)
 
 
+def self_service_instance():
+    return AccountService()
+
+
 def login():
-    return render_template("login.html")
+    service = self_service_instance()
+    return service.signin()
 
 
 def register():
-    return render_template("register.html")
+    service = self_service_instance()
+    return service.create_account()
+
+
+def create_account():
+    service = self_service_instance()
+    return service.db_register()
 
 
 def user_login():
-    user_email = request.form['Email']
-    user_password = request.form['Password']
-    if user_email == "mukilan007k@gmail.com":
-        session['user_email'] = user_email
-        return render_template("homepage.html")
-    return f"<h1> {user_email} </h1>"
+    service = self_service_instance()
+    return service.login_view()
+
+
 # if len(user)>0:
 
 
 def logout():
-    session.pop('user_email')
-    return redirect('/login')
+    service = self_service_instance()
+    return service.logout_view()
 
 
 login_blueprint.add_url_rule(rule="/login", endpoint=Endpoint.LOGIN, view_func=login)
 login_blueprint.add_url_rule(rule="/register", endpoint=Endpoint.REGISTER, view_func=register)
+login_blueprint.add_url_rule(rule="/create/account", endpoint=Endpoint.CREATE_ACCOUNT, view_func=create_account, methods=[HTTP_REQUESTS_CONSTANTS.POST])
 login_blueprint.add_url_rule(rule="/home", endpoint=Endpoint.USERLOGIN, view_func=user_login,
                              methods=[HTTP_REQUESTS_CONSTANTS.POST])
 login_blueprint.add_url_rule(rule="/logout", endpoint=Endpoint.LOGOUT, view_func=logout)

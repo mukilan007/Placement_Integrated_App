@@ -9,6 +9,7 @@ class Endpoint:
     LOGIN = "Login"
     REGISTER = "Register"
     LOGOUT = "Logout"
+    CREATE_ACCOUNT = "create_account"
 
 
 class HttpStatusCodes:

@@ -1,8 +1,7 @@
 import os
 
-from account.main.loginform import login_blueprint
+from accounts.route.loginform import login_blueprint
 from flask import Flask, redirect
-from pymongo import MongoClient
 
 app = Flask(__name__, template_folder='templates')
 app.secret_key = os.urandom(24)

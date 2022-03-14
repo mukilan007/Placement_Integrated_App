@@ -1,4 +1,4 @@
-from flask import request, render_template, session, redirect, jsonify
+from flask import request, render_template, session, redirect, jsonify, make_response
 from accounts.schema.userschema import Register
 from metadata.main import db_account
 
@@ -48,7 +48,7 @@ class AccountService():
             # for i in db_email:
             #     session['id'] = i["_id"]
             return render_template("homepage.html")
-        return "Incorrect email id or password, Try Again... "
+        return make_response(jsonify("Incorrect email id or password, Try Again... "), 500)
 
     # if len(user)>0:
 

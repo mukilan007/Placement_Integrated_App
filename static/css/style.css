@@ -1,13 +1,49 @@
 .bg-navs{
-    background: #314755; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #314755, #26a0da); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #314755, #26a0da);
+   width: 100%;
+  height: 1%;
+}
+.bg-app{
+    background: #12c2e9;
+    background: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    padding: 1px;
 }
 
-.bg-app{
-    background: #12c2e9; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f64f59); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.background_color{
+    background: #314755;
+    background: -webkit-linear-gradient(to right, #314755, #26a0da);
+    background: linear-gradient(to right, #314755, #26a0da);
+    padding: 0% 0% 14.5% 0%;
+}
+
+#toast{
+    position: absolute;
+    top: 15%;
+    right:30px;
+    border-radius: 12px;
+    background-color: white;
+    padding: 10px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgb(0,0,0,0.1);
+    border-left: 10px solid green;
+}
+
+#toast .toast-content{
+    display: flex;
+    align-items: center;
+}
+
+#toast .toast-content .cheak{
+    height: 35px;
+    width: 35px;
+    background: green;
+    color: #fff;
+    font-size: 20px;
+}
+
+#toast .toast-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
 }
 
 .mt-250{
@@ -27,49 +63,6 @@
     padding-right: 40px;
     padding-bottom: 30px;
     padding-left: 40px;
-}
-
-.mobile-container {
-  margin: auto;
-  background-color: #555;
-  color: white;
-  border-radius: 10px;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
-
-.topnav #myLinks {
-  display: none;
-}
-
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.active {
-  background-color: #04AA6D;
-  color: white;
 }
 
 .loader-container{

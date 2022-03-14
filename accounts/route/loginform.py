@@ -41,7 +41,8 @@ def logout():
 
 login_blueprint.add_url_rule(rule="/login", endpoint=Endpoint.LOGIN, view_func=login)
 login_blueprint.add_url_rule(rule="/register", endpoint=Endpoint.REGISTER, view_func=register)
-login_blueprint.add_url_rule(rule="/create/account", endpoint=Endpoint.CREATE_ACCOUNT, view_func=create_account, methods=[HTTP_REQUESTS_CONSTANTS.POST])
+login_blueprint.add_url_rule(rule="/create/account", endpoint=Endpoint.CREATE_ACCOUNT, view_func=create_account,
+                             methods=[HTTP_REQUESTS_CONSTANTS.POST])
 login_blueprint.add_url_rule(rule="/home", endpoint=Endpoint.USERLOGIN, view_func=user_login,
                              methods=[HTTP_REQUESTS_CONSTANTS.POST])
 login_blueprint.add_url_rule(rule="/logout", endpoint=Endpoint.LOGOUT, view_func=logout)

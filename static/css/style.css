@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?fami?')
+@import url('https://fonts.googleapis.com/css2?fami?');
 *{
 margin:0;
 padding:0;
@@ -37,12 +37,12 @@ font-weight: 400px;
 }
 .sidebar #btn{
 position:absolute;
-color:#fff
-left:90%
-top:6px
-font-size:20px
-height:50px
-width:50px
+color:#fff;
+left:90%;
+top:6px;
+font-size:20px;
+height:50px;
+width:50px;
 text-align:center;
 line-height:50px;
 transform:translateX(-50);
@@ -54,7 +54,7 @@ margin-top:20px;
 position:relative;
 height:50px;
 width:100%;
-margin:0 5px
+margin:0 5px;
 list-style:none;
 line-height:50px;
 border-radius:12px;
@@ -143,7 +143,7 @@ border-radius:12px;
 .home_content{
 position:absolute;
 height:100%;
-width:calc(100%-240px);
+width:calc(100%- 240px);
 left:240px;
 }
 .home_conntent .text{
@@ -271,8 +271,8 @@ footer
     position: relative;
     width: 100%;
     background: black;
-    bottom :0;
     min-height: 100px;
+    bottom: 0px;
     padding: 20px 50px;
     display: flex;
     justify-content: center;

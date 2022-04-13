@@ -3,13 +3,46 @@ class BlueprintName:
     LOGIN = "login"
 
 
+class Random:
+    SECRET_KEY = b'pRmgMa8T0INjEAfksaq2aafzoZXEuwKI7wDe4c1F8AY='
+
+
 class Endpoint:
     """ Route endpoints """
-    USERLOGIN = "UserLogin"
+    USER_LOGIN = "UserLogin"
     LOGIN = "Login"
     REGISTER = "Register"
     LOGOUT = "Logout"
     CREATE_ACCOUNT = "create_account"
+    NEW_REGISTER = "newRegister"
+
+
+class HTMLUserDetail:
+    FIRST_NAME = "first_name"
+    LAST_NAME = "last_name"
+    E_MAIL_ID = "E-mail"
+    PASSWORD = "password"
+    CONTACT_NUMBER = "contact_no"
+
+
+class DBDetail:
+    ID = "_id"
+    NAME = "Name"
+    FIRST_NAME = "first_name"
+    LAST_NAME = "last_name"
+    E_MAIL_ID = "email"
+    PASSWORD = "password"
+    CONTACT_NUMBER = "contact_no"
+    CREATED_BY = "_created_by"
+    CREATED_AT = "_created_at"
+    MODIFIED_BY = "_modified_by"
+    MODIFIED_AT = "_modified_at"
+    DELETED = "_is_deleted"
+
+
+class Date:
+    DEFAULT_FORMAT = "%Y-%m-%dT%H:%M:%S"
+    FORMAT_WITH_GMT_TIME_ZONE = "%Y-%m-%dT%H:%M:%SZ"
 
 
 class HttpStatusCodes:

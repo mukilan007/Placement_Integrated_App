@@ -252,7 +252,7 @@ body{
    width: 100%;
   height: 1%;
 }
-.bg-app{
+.bg-app{    /* used for color gradient for top lef */
     background: #12c2e9;
     background: -webkit-linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
     background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
@@ -263,6 +263,13 @@ body{
     background: #314755;
     background: -webkit-linear-gradient(to right, #314755, #26a0da);
     background: linear-gradient(to right, #314755, #26a0da);
+    padding: 0% 0% 14.5% 0%;
+}
+.restaurant_background_color{
+    background: #FF0099;
+    background: -webkit-linear-gradient(to right, #493240, #FF0099);
+    background: linear-gradient(to right, #493240, #FF0099);
+
     padding: 0% 0% 14.5% 0%;
 }
 

@@ -23,3 +23,19 @@ class Register:
 
     def sign_up(self):
         return self.data
+
+    # def restaurant_sign_up(self):
+    #     data = {
+    #         'Vendor_Prefix':
+    #         'Name_of_Vendor':
+    #     'Vendor_Address':
+    #     'Vendor_Country':
+    #     'Vendor_State':
+    #     'Vendor_City':
+    #     'Vendor_Pincode':
+    #     'Vendor_Personal_Contact_No':
+    #     'Vendor_Personal_Email_Id':
+    #     'Vendor_PAN_No':
+    #     'Vendor_Upload_Pan_Document':
+    #
+    #     }

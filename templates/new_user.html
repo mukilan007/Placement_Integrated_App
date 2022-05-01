@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New_User</title>
+</head>
+<body>
+
+
+
+<center>
+		<table>
+			<thead>
+				<tr>
+					<th>Dish</th>
+					<td><input type="text" name="Veg/Non-Veg" id="Dish"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Item Name</th>
+					<td><input type="text" name="Item" id="Item"></td>
+				</tr>
+				<tr>
+					<th>Quantity</th>
+					<td><input type="text" name="Quantity" id="Quantity"></td>
+				</tr>
+				<tr>
+					<th>Price</th>
+					<td><input type="text" name="Price" id="Price"></td>
+				</tr>
+                <tr>
+					<th>Image-URL</th>
+					<td><input type="text" name="Image" id="Image"></td>
+				</tr>
+				<tr id="btna">
+					<td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"onclick="onreset(0)"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table id="show">
+			<thead>
+				<tr>
+					<th>Dish</th>
+					<th>Item Name</th>
+					<th>Quantity</th>
+					<th>Price</th>
+                    <th>Image-URL</th>
+				</tr>
+			</thead>
+		</table>
+</center>
+
+	<script>
+
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+		var list5 = [];
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("Dish").value;
+			list2[x] = document.getElementById("Item").value;
+			list3[x] = document.getElementById("Quantity").value;
+			list4[x] = document.getElementById("Price").value;
+			list5[x] = document.getElementById("Image").value;
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+			var cel5 = NewRow.insertCell(4);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+			cel5.innerHTML = list5[x];
+			n++;
+			x++;
+		}
+
+	</script>
+<style>
+	table{
+	margin-top: 50px;
+	text-align: center;
+	background: #333;
+	color: #fff;
+}
+
+#show th, #show td{
+	padding: 13px;
+}
+
+#btna td input{
+	width: 100%;
+}
+</style>
+<form action="Result.html" method="GET">
+    <div>
+        <label for="dish">Dish</label>
+        <input type="text" name="dish" id="dish">
+    </div>
+    <div>
+        <label for="item">Item</label>
+        <input type="text" name="item" id="item">
+    </div>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

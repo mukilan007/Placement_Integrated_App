@@ -27,7 +27,23 @@ def restaurant_login():
     return render_template("restaurant_login.html")
 
 
-redirect_blueprint.add_url_rule(rule="/login", endpoint=Endpoint.LOGIN, view_func=login, methods=[HTTP_REQUESTS_CONSTANTS.GET])
-redirect_blueprint.add_url_rule(rule="new/register", endpoint=Endpoint.NEW_REGISTER, view_func=new_register, methods=[HTTP_REQUESTS_CONSTANTS.GET])
-redirect_blueprint.add_url_rule(rule="/register", endpoint=Endpoint.REGISTER, view_func=register, methods=[HTTP_REQUESTS_CONSTANTS.GET])
-redirect_blueprint.add_url_rule(rule="/restaurant/login", endpoint=Endpoint.RESTAURANT_LOGIN, view_func=restaurant_login, methods=[HTTP_REQUESTS_CONSTANTS.GET])
+def new_feedback():
+    return render_template("feedback.html")
+
+
+def homepage():
+    return render_template("homepage.html")
+
+
+redirect_blueprint.add_url_rule(rule="/login", endpoint=Endpoint.LOGIN, view_func=login,
+                                methods=[HTTP_REQUESTS_CONSTANTS.GET])
+redirect_blueprint.add_url_rule(rule="new/register", endpoint=Endpoint.NEW_REGISTER, view_func=new_register,
+                                methods=[HTTP_REQUESTS_CONSTANTS.GET])
+redirect_blueprint.add_url_rule(rule="/register", endpoint=Endpoint.REGISTER, view_func=register,
+                                methods=[HTTP_REQUESTS_CONSTANTS.GET])
+redirect_blueprint.add_url_rule(rule="/restaurant/login", endpoint=Endpoint.RESTAURANT_LOGIN,
+                                view_func=restaurant_login, methods=[HTTP_REQUESTS_CONSTANTS.GET])
+redirect_blueprint.add_url_rule(rule="/feedback", endpoint=Endpoint.FEEDBACK, view_func=new_feedback,
+                                methods=[HTTP_REQUESTS_CONSTANTS.GET])
+redirect_blueprint.add_url_rule(rule="/home", endpoint=Endpoint.HOME, view_func=homepage,
+                                methods=[HTTP_REQUESTS_CONSTANTS.GET])

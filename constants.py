@@ -3,6 +3,7 @@ class BlueprintName:
     LOGIN = "login"
     REDIRECT = "redirect"
     RESTAURANT = "restaurant"
+    DISH = "dish"
 
 
 class Random:
@@ -18,6 +19,8 @@ class Endpoint:
     CREATE_ACCOUNT = "Create_Account"
     NEW_REGISTER = "NewRegister"
     RESTAURANT_LOGIN = "RestaurantLogin"
+    FEEDBACK = "feedback"
+    HOME = "home"
 
 
 class HTMLUserDetail:

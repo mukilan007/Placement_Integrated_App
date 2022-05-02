@@ -12,7 +12,8 @@ app.secret_key = os.urandom(24)
 app.register_blueprint(login_blueprint, url_prefix="/BIT/Quickfood/account")
 app.register_blueprint(redirect_blueprint, url_prefix="/BIT/Quickfood/2")
 app.register_blueprint(restaurant_blueprint, url_prefix="/BIT/Quickfood/restaurant")
-app.register_blueprint(dish_blueprint, url_prefix="/BIT/Quickfood/food")
+app.register_blueprint(dish_blueprint, url_prefix="/BIT/Quickfood/dish")
+
 
 @app.route('/')
 def home():

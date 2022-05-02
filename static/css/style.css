@@ -322,6 +322,7 @@ body{
     padding-left: 40px;
 }
 
+
 .loader-container{
     position: fixed;
     top:0; left:0;
@@ -335,7 +336,6 @@ body{
     overflow: hidden;
 }
 
-
 .loader-container img{
     width:35rem;
 }
@@ -344,6 +344,7 @@ body{
     top:-110%;
     opacity:0;
 }
+
 
 .first-hotel{
     background-color: #FFC7C7;
@@ -369,6 +370,7 @@ body{
 
 footer
 {
+    margin-top: 100px;
     position: relative;
     width: 100%;
     background: black;

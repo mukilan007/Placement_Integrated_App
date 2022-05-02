@@ -1,58 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>New_User</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
+{%  block body  %}
+<div class="col-3">
+    <a href="/BIT/Quickfood/2/restaurant/login" class="getnewrestaurantbtn" style="background-color: red">LOG OUT</a>
+</div><br>
+<form class="form" action="" method="post" enctype="multipart/form-data">
+    <center>
+        <div class="form">
+            <div class="card mt-325">
+                <div class="card-body">
+                    <div class="card-body">
+                        <h1 class="text-center">Please sign in</h1><br>
+                        <div class="form-floating">
+                            <label>Dish Type</label><br>
+                            <input type="text" name="Veg/Non-Veg" id="Dish">
+                        </div>
+                        <div class="form-floating mt-3">
+                            <label>Item</label><br>
+                            <input type="text" name="Item" id="Item">
+                        </div>
+                        <div class="form-floating">
+                            <label>Quantity</label><br>
+                            <input type="text" name="Veg/Non-Veg" id="Quantity">
+                        </div>
+                        <div class="form-floating mt-3">
+                            <label>Price</label><br>
+                            <input type="text" name="Item" id="Price">
+                        </div>
+                        <div class="form-floating">
+                            <label>Image of the dish</label><br>
+                            <input type="text" name="Veg/Non-Veg" id="Image">
+                        </div>
+                        <input type="button" name="button" id="btn" value="Add" onclick="AddRow()" onclick="onreset(0)">
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <table id="show">
+            <thead>
+            <tr>
+                <th>Dish</th>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Image-URL</th>
+            </tr>
+            </thead>
+        </table>
+    </center>
+    <input type="submit" class="btn btn-primary btn-block btn-lg mt-3" value="Add Dish">
+</form>
 
-<center>
-		<table>
-			<thead>
-				<tr>
-					<th>Dish</th>
-					<td><input type="text" name="Veg/Non-Veg" id="Dish"></td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>Item Name</th>
-					<td><input type="text" name="Item" id="Item"></td>
-				</tr>
-				<tr>
-					<th>Quantity</th>
-					<td><input type="text" name="Quantity" id="Quantity"></td>
-				</tr>
-				<tr>
-					<th>Price</th>
-					<td><input type="text" name="Price" id="Price"></td>
-				</tr>
-                <tr>
-					<th>Image-URL</th>
-					<td><input type="text" name="Image" id="Image"></td>
-				</tr>
-				<tr id="btna">
-					<td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"onclick="onreset(0)"></td>
-				</tr>
-			</tbody>
-		</table>
-
-		<table id="show">
-			<thead>
-				<tr>
-					<th>Dish</th>
-					<th>Item Name</th>
-					<th>Quantity</th>
-					<th>Price</th>
-                    <th>Image-URL</th>
-				</tr>
-			</thead>
-		</table>
-</center>
-
-	<script>
+<script>
 
 		var list1 = [];
 		var list2 = [];
@@ -89,7 +89,10 @@
 			x++;
 		}
 
-	</script>
+
+
+
+</script>
 <style>
 	table{
 	margin-top: 50px;
@@ -105,18 +108,8 @@
 #btna td input{
 	width: 100%;
 }
+
+
+
 </style>
-<form action="Result.html" method="GET">
-    <div>
-        <label for="dish">Dish</label>
-        <input type="text" name="dish" id="dish">
-    </div>
-    <div>
-        <label for="item">Item</label>
-        <input type="text" name="item" id="item">
-    </div>
-    <button type="reset">Reset</button>
-    <button type="submit">Submit</button>
-</form>
-</body>
-</html>
+{%  endblock  %}

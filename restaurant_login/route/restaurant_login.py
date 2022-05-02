@@ -10,11 +10,6 @@ def self_service():
     return AccountService()
 
 
-def login():
-    service = self_service()
-    return service.Restaurant_signin()
-
-
 def create_account():
     payload = request.form.to_dict()
     service = self_service()
@@ -22,8 +17,9 @@ def create_account():
 
 
 def user_login():
+    payload = request.form.to_dict()
     service = self_service()
-    return service.Restaurant_login_view()
+    return service.Restaurant_login_view(payload)
 
 
 def logout():
@@ -37,3 +33,6 @@ def delete():
 
 
 restaurant_blueprint.add_url_rule(rule="/create/account", endpoint=Endpoint.CREATE_ACCOUNT, view_func=create_account, methods=[HTTP_REQUESTS_CONSTANTS.POST])
+restaurant_blueprint.add_url_rule(rule="/home", endpoint=Endpoint.USER_LOGIN, view_func=user_login, methods=[HTTP_REQUESTS_CONSTANTS.POST])
+restaurant_blueprint.add_url_rule(rule="/logout", endpoint=Endpoint.LOGOUT, view_func=logout, methods=[HTTP_REQUESTS_CONSTANTS.GET])
+restaurant_blueprint.add_url_rule(rule="/delete", endpoint="delete", view_func=delete, methods=[HTTP_REQUESTS_CONSTANTS.DELETE])

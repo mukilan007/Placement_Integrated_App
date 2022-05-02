@@ -58,7 +58,7 @@ class AccountService:
             name = session[DBDetail.FIRST_NAME]
             db_account.UserMetadata.delete_one({DBDetail.ID: ObjectId(user_id)})
             session.clear()
-            return dumps(f"{name} thanks for using NMN, and your account was deleted")
+            return dumps(f"{name} thanks for using Quick food, and your account was deleted")
         except Exception:
             return dumps("cannot find the account. please entered the valid details")
 

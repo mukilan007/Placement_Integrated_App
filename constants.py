@@ -43,6 +43,13 @@ class DBDetail:
     DELETED = "_is_deleted"
 
 
+class Restaurant_DBDetail:
+    ID = "_id"
+    NAME = "vendor_name"
+    E_MAIL_ID = "vendor_email"
+    PASSWORD = "vendor_password"
+
+
 class Date:
     DEFAULT_FORMAT = "%Y-%m-%dT%H:%M:%S"
     FORMAT_WITH_GMT_TIME_ZONE = "%Y-%m-%dT%H:%M:%SZ"

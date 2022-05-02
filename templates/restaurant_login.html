@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{%  block body  %}
+<div class="restaurant_background_color">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 class="text-light display mt-250" style="font-size:80px">One step to move forward of your career. Be ready for Journey</h1>
+        </div>
+        <div class="col-md-4">
+          <div class="card mt-325">
+            <div class="card-body">
+              <form class="form" action="" method="post" enctype="multipart/form-data">
+                <h1 class="text-center">Please sign in</h1><br>
+                <div class="form-floating">
+                  <input type="email" class="form-control" name="E-mail" id="floatingInput" placeholder="name@bitsathy.ac.in" required>
+                  <label for="floatingInput">Email Id</label>
+                </div>
+                <div class="form-floating mt-3">
+                  <input type="password" class="form-control" name="password" id="floatingInput" placeholder="Password" required>
+                  <label for="floatingInput">Password</label>
+                </div>
+                  <input type="submit" class="btn btn-primary btn-block btn-lg mt-3" value="SIGN IN">
+              </form>
+                <p class="mt-3">Sign up? <a href="/BIT/Quickfood/2/new/register" title="Welcome new foodie">Create Account</a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+{%  endblock  %}

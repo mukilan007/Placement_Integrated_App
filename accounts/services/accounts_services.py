@@ -2,7 +2,7 @@ from accounts.schema.userschema import Register
 from base.auth.Authentication import token_validate, fernet
 from bson.objectid import ObjectId
 from constants import HTMLUserDetail, DBDetail
-from flask import request, render_template, session, redirect, jsonify, make_response
+from flask import request, render_template, session, redirect, jsonify, make_response, json
 from json import dumps
 from metadata.main import db_account
 
@@ -14,23 +14,11 @@ class AccountService:
     def __init__(self):
         self.session = None
 
-    def signin(self):
-        """
-                redirecting to user signin page
-        """
-        return render_template("login.html")
-
-    def create_account(self):
-        """
-                redirecting to new user signup page
-        """
-        return render_template("register.html")
-
     def db_register(self):
         """
                 getting information from signup page,
                 comparing to DB collection and creating new account
-        :return: redirecting to new user home page
+                :return: redirecting to new user home page
         """
         respond = Register(self.session).sign_up()
         if db_account.UserMetadata.find_one({DBDetail.E_MAIL_ID: respond['email']}):
@@ -40,6 +28,7 @@ class AccountService:
         return render_template("homepage.html")
 
     def login_view(self):
+        payloads = request.form
         user_email = request.form['E-mail']
         user_password = request.form['password']
         payload = list(db_account.UserMetadata.find({DBDetail.E_MAIL_ID: f"{user_email}"}))
@@ -58,7 +47,7 @@ class AccountService:
             #                    app.config['SECRET_KEY'])
             # jsonify({'token': token.decode('UTF-8')})
             return render_template("homepage.html")
-        return make_response(jsonify("Incorrect email id or password, Try Again... "), 500)
+        return make_response(jsonify(f"{payloads}"), 500)
 
     # if len(user)>0:
 

@@ -3,7 +3,8 @@ function loader(){
 }
 
 function fadeOut(){
-  setInterval(loader, 3000);
+  setInterval(loader, 600)
+
 }
 
 window.onload = fadeOut;

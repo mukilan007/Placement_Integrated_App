@@ -498,6 +498,7 @@ header{
 .col-3{
     width: 33%;
     float: left;
+    margin-left: -180px;
 }
 .top-nav{
     margin-top: 32px;
@@ -521,23 +522,27 @@ header{
     text-decoration: none;
     color: #FFFFFF;
     padding: 10px 26px;
-    margin-top: 20px;
     display: inline-block;
     font-size: 17px;
     float: right
 }
 #top-section-main{
-    background-image: url("image/img_1.png");
+    background-image: url("image/Food banner.jpg");
     background-color: black;
-    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-    weight: 930px;
-    height: 541px;
+    height: 551px;
     border: none;
 }
 #top-section-content{
     width: 60%;
-    color: #BB1AD0;
+    padding-top: 70px;
+    padding-left: 2px;
+    color: snow;
+    font-size:larger;
     margin-left:auto;
     margin-right: auto;
     margin-top: 0;
@@ -551,15 +556,15 @@ header{
 }
 #top-section-content p{
     font-size: 1.3em;
-    color: #1935EA;
-    padding-top: 10px;
+    color: #B30753;
+    padding-top: 20px;
     text-align: center;
     margin-top: 0px;
 
 }
 .location_search{
-    margin-left: 18em;
-    margin-top: 15em;
+    margin-left: 13em;
+    margin-top: 8em;
 }
 .location_search input{
     margin: 0px;
@@ -585,6 +590,7 @@ header{
     width: 20%;
     float: left;
     padding: 6px;
+
 }
 .div-top-nav{
     margin-top: 32px;
@@ -754,4 +760,114 @@ hr {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+
+
+
+
+
+
+
+#special {
+  background: #0D0D0D;
+  min-height: 100vh;
+}
+
+#special .heading h1 {
+  font-size: 4rem;
+  color: #000;
+  padding-top: 7rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+#special .heading h1 span {
+  color: #FFF200;
+}
+
+#special .heading p {
+  color: #ccc;
+  font-size: 2rem;
+}
+
+#special .card-container {
+  width: 95%;
+  margin: 7rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#special .card-container .card {
+  height: 40rem;
+  width: 30rem;
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+#special .card-container .card img {
+  height: 50%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#special .card-container .card p {
+  font-size: 1.4rem;
+  margin: 2rem 0;
+}
+
+#special .card-container .card button {
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  color: #333;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: .2rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height: 3.5rem;
+  width: 14rem;
+  background: #333;
+  color: #fff;
+}
+
+#special .card-container .card button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FFF200;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: .2s;
+  transition: .2s;
+  z-index: -1;
+}
+
+#special .card-container .card button:hover::before {
+  width: 100%;
+}
+
+#special .card-container .card button:hover {
+  color: #333;
+}
+
+#special .card-container .card:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }

@@ -35,6 +35,8 @@ def homepage():
     return render_template("homepage.html")
 
 
+
+
 redirect_blueprint.add_url_rule(rule="/login", endpoint=Endpoint.LOGIN, view_func=login,
                                 methods=[HTTP_REQUESTS_CONSTANTS.GET])
 redirect_blueprint.add_url_rule(rule="new/register", endpoint=Endpoint.NEW_REGISTER, view_func=new_register,

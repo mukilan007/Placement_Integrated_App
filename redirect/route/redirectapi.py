@@ -34,7 +34,11 @@ def new_feedback():
 def homepage():
     return render_template("homepage.html")
 
+def chickenrestaurant():
+    return render_template("chickenrestaurant.html")
 
+def chickenrecipe():
+    return render_template("chickenrecipe.html")
 
 
 redirect_blueprint.add_url_rule(rule="/login", endpoint=Endpoint.LOGIN, view_func=login,
@@ -48,4 +52,8 @@ redirect_blueprint.add_url_rule(rule="/restaurant/login", endpoint=Endpoint.REST
 redirect_blueprint.add_url_rule(rule="/feedback", endpoint=Endpoint.FEEDBACK, view_func=new_feedback,
                                 methods=[HTTP_REQUESTS_CONSTANTS.GET])
 redirect_blueprint.add_url_rule(rule="/home", endpoint=Endpoint.HOME, view_func=homepage,
+                                methods=[HTTP_REQUESTS_CONSTANTS.GET])
+redirect_blueprint.add_url_rule(rule="/chickenrestaurant", view_func=chickenrestaurant,
+                                methods=[HTTP_REQUESTS_CONSTANTS.GET])
+redirect_blueprint.add_url_rule(rule="/chickenrecipe", view_func=chickenrecipe,
                                 methods=[HTTP_REQUESTS_CONSTANTS.GET])

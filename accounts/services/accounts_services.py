@@ -46,7 +46,7 @@ class AccountService:
             # token = jwt.encode({'user': payload, 'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=40)},
             #                    app.config['SECRET_KEY'])
             # jsonify({'token': token.decode('UTF-8')})
-            return render_template("homepage.html")
+            return render_template("chickenrecipe.html")
         return make_response(jsonify(f"{payloads}"), 500)
 
     # if len(user)>0:

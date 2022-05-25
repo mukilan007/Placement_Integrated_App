@@ -13,9 +13,9 @@
                     <div class="card-body">
                         <h1 class="text-center">Please sign in</h1><br>
                         <div class="form-floating">
-                            <label>Dish Type</label>
+                            <label>Dish Type <span style="color: Red"> *</span></label>
                             <div style="padding-left:45%; padding-right:45%">
-                            <select class="form-control" id="Dish" name="Veg/Non-Veg" required>
+                            <select class="form-control" id="Dish" name="type"  required>
                                 <option value="">--- Select ---</option>
                                 <option value="1">Veg</option>
                                 <option value="2">Non-Veg</option>
@@ -25,23 +25,23 @@
                             </div>
                         </div>
                         <div class="form-floating mt-3">
-                            <label>Item name</label><br>
-                            <input type="text" name="Item" id="Item">
+                            <label >Item name <span style="color: Red"> *</span></label><br>
+                            <input type="text" name="Item" id="Item" required>
                         </div>
                         <div class="form-floating">
-                            <label>Quantity</label><br>
-                            <input type="number" name="Quantity" id="Quantity">
+                            <label>Quantity <span style="color: Red"> *</span></label><br>
+                            <input type="number" name="Quantity" id="Quantity" required>
                         </div>
                         <div class="form-floating mt-3">
-                            <label>Price</label><br>
-                            <input type="number" name="Price" id="Price">
+                            <label>Price <span style="color: Red"> *</span></label><br>
+                            <input type="number" name="Price" id="Price" required>
                         </div>
                         <div class="form-floating">
                             <label>Image of the dish</label><br>
                             <input type="url" name="Image" id="Image">
                         </div>
-                        <input type="reset" value="Reset">
-                        <input type="button" name="button" id="btn" value="Add" onclick="AddRow()" onclick="onreset(0)">
+                        <input type="reset" class="btn btn-primary btn-block btn-lg mt-3" value="Reset">
+                        <input type="submit" name="_is_delete" class="btn btn-primary btn-block btn-lg mt-3" id="btn" value="None" onclick="AddRow()" onclick="onreset(0)">
                     </div>
                 </div>
             </div>

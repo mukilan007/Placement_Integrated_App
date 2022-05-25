@@ -3,7 +3,7 @@ import os
 from accounts.route.loginform import login_blueprint
 from redirect.route.redirectapi import redirect_blueprint
 from restaurant_login.route.restaurant_login import restaurant_blueprint
-from project.route.maintain_food import dish_blueprint
+from project.route.maintain_food import project_blueprint
 from flask import Flask, redirect
 
 app = Flask(__name__, template_folder='templates')
@@ -12,7 +12,7 @@ app.secret_key = os.urandom(24)
 app.register_blueprint(login_blueprint, url_prefix="/BIT/Quickfood/account")
 app.register_blueprint(redirect_blueprint, url_prefix="/BIT/Quickfood/2")
 app.register_blueprint(restaurant_blueprint, url_prefix="/BIT/Quickfood/restaurant")
-app.register_blueprint(dish_blueprint, url_prefix="/BIT/Quickfood/dish")
+app.register_blueprint(project_blueprint, url_prefix="/BIT/Quickfood/dish")
 
 
 @app.route('/')

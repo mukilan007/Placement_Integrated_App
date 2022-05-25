@@ -34,15 +34,17 @@ def new_feedback():
 def homepage():
     return render_template("homepage.html")
 
+
 def chickenrestaurant():
     return render_template("chickenrestaurant.html")
+
 
 def chickenrecipe():
     return render_template("chickenrecipe.html")
 
+
 def profile():
     return render_template("profile.html")
-
 
 
 redirect_blueprint.add_url_rule(rule="/login", endpoint=Endpoint.LOGIN, view_func=login,

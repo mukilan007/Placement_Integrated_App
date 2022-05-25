@@ -21,6 +21,7 @@ class Endpoint:
     RESTAURANT_LOGIN = "RestaurantLogin"
     FEEDBACK = "feedback"
     HOME = "home"
+    SEARCH_REST = "search_rest"
 
 
 class HTMLUserDetail:

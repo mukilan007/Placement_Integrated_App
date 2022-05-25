@@ -27,7 +27,8 @@ class AccountService:
         db_account.UserMetadata.insert_one(respond)
         return render_template("homepage.html")
 
-    def login_view(self):
+    @staticmethod
+    def login_view():
         payloads = request.form
         user_email = request.form['E-mail']
         user_password = request.form['password']
